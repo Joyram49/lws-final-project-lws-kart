@@ -1,0 +1,12 @@
+export { default as productOne } from "./product1.jpg";
+export { default as productTen } from "./product10.jpg";
+export { default as productEleven } from "./product11.jpg";
+export { default as productTwelve } from "./product12.jpg";
+export { default as productTwo } from "./product2.jpg";
+export { default as productThree } from "./product3.jpg";
+export { default as productFour } from "./product4.jpg";
+export { default as productFive } from "./product5.jpg";
+export { default as productSix } from "./product6.jpg";
+export { default as productSeven } from "./product7.jpg";
+export { default as productEight } from "./product8.jpg";
+export { default as productNine } from "./product9.jpg";

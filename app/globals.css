@@ -2,32 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  body {
+    @apply font-poppins;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-roboto;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .size-selector input:checked + label {
+    @apply bg-primary text-white;
+  }
+  .color-selector input:checked + label {
+    @apply ring-2 ring-primary;
+  }
+  .input-box {
+    @apply block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded placeholder-gray-400 focus:border-primary focus:ring-0;
+  }
 }
-
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .custom-background {
+    background-image: url("../public/images/banner-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .star-container {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: hidden; /* Ensure the overlay doesn't spill out */
+  }
+
+  .star-background,
+  .star-overlay {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+  }
+
+  .star-background {
+    background: gray;
+  }
+
+  .star-overlay {
+    background: gold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(var(--fill) * 100%);
+  }
+
+  .star-rating {
+    display: flex;
+    align-items: center;
   }
 }

@@ -1,0 +1,11 @@
+export { default as bed2 } from "./bed-2.svg";
+export { default as bed } from "./bed.svg";
+export { default as deliveryVan } from "./delivery-van.svg";
+export { default as moneBack } from "./money-back.svg";
+export { default as office } from "./office.svg";
+export { default as outdoorCave } from "./outdoor-cafe.svg";
+export { default as phone } from "./phone.svg";
+export { default as restaurant } from "./restaurant.svg";
+export { default as serviceHours } from "./service-hours.svg";
+export { default as sofa } from "./sofa.svg";
+export { default as terrace } from "./terrace.svg";
